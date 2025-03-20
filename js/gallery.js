@@ -71,11 +71,11 @@ function tamplete(array) {
 
 function handleClick(event) {
     event.preventDefault();
-   
-    const bigPhoto = currentPhoto.dataset.source;
-    // console.log(currentPhoto.dataset.source);
-    // const currentPhoto = event.target.closest('.gallery-image');
-    const currentPhoto = event.target;
+    
+    // console.log(event);
+    const bigPhoto = event.target.dataset.source;
+    const currentPhoto = event.target.alt;
+    // console.log(currentPhoto);
 
     const instance = basicLightbox.create(`
     <div class="modal">
